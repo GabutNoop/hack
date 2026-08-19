@@ -1,0 +1,17 @@
+# Seed template for ~/.hermes/config.yaml
+# Official Hermes Agent + WebUI: custom OpenAI-compatible endpoints
+# live under custom_providers and can be switched in Settings → Providers.
+
+model:
+  provider: custom
+  default: glm-5.3
+  base_url: https://bandelbanget.xyz/v1
+
+custom_providers:
+  - name: bandel
+    base_url: https://bandelbanget.xyz/v1
+    api_key: ${OPENAI_API_KEY}
+    model: glm-5.3
+
+agent:
+  max_turns: 40
